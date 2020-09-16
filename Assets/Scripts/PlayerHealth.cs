@@ -18,7 +18,8 @@ public class PlayerHealth : MonoBehaviour
             // Destroy the game object if hitpoints is less than 0 
             // the object that is attached to 
 
-            Debug.Log("You dead, my nig"); 
+            GetComponent<DeathHandler>().HandleDeath(); 
+
 
         }
     }

@@ -10,6 +10,8 @@ public class EnemyAI : MonoBehaviour
     //transform allows you take coordinates of set object
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
+    //turn speed of the AI
+    [SerializeField] float turnSpeed = 5f; 
 
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
@@ -39,9 +41,14 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-
+    public void OnDamageTaken()
+    {
+        /*isProvoked = true;*/
+        Debug.Log("Enemy AI: I know you attacked me"); 
+    }
     private void EngageTarget()
     {
+        FaceTarget(); 
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {
              ChaseTarget(); 
@@ -69,6 +76,16 @@ public class EnemyAI : MonoBehaviour
         
         GetComponent<Animator>().SetBool("Attack", true); 
         //Debug.Log(name + " has seeked and is destroying " + target.name); 
+    }
+
+    // This is to fix the the ai to turn towards the player when attacking 
+    private void FaceTarget()
+    { // when normalized, you only get the direction instead of the magnitude
+        Vector3 direction = (target.position - transform.position).normalized;
+        
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        //Slerp lets you slowly turn to the desired  direction 
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed); 
     }
 
     //default method for drawing visible forcefield around an object

@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        // This is able to calla  method in the gamobject that is attached to
+        BroadcastMessage("OnDamageTaken"); 
         hitPoints -= damage; 
         if(hitPoints <= 0)
         {

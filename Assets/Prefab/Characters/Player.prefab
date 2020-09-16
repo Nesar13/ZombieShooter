@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 13600000}
   - component: {fileID: 11400004}
   - component: {fileID: 4230947969454234196}
+  - component: {fileID: 666012684316876919}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -315,6 +316,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
+--- !u!114 &666012684316876919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb91fec329f7988459b9bab034eb874b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 0}
 --- !u!1 &1937202830114737960
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +376,7 @@ MonoBehaviour:
   range: 100
   damage: 20
   muzzleFlash: {fileID: 6098851066788672030}
-  hitEffect: {fileID: 8567915466876334663, guid: 70c59c17ad707c446a4a5d9183d89208, type: 3}
+  hitEffect: {fileID: 0}
 --- !u!1001 &7074563711221156522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,11 +434,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3088114988118466555, guid: 3c81b162a1af44348b8994f7040514d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.077
+      value: 1.165
       objectReference: {fileID: 0}
     - target: {fileID: 3088114988118466555, guid: 3c81b162a1af44348b8994f7040514d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.044
+      value: 0.054
       objectReference: {fileID: 0}
     - target: {fileID: 4790183750569409297, guid: 3c81b162a1af44348b8994f7040514d4, type: 3}
       propertyPath: m_LocalRotation.y
