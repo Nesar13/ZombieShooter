@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
     //instantiate a gameObject and destroy it 
     [SerializeField] GameObject hitEffect;
 
+    [SerializeField] Ammo ammoSlot; 
    
 
     // Update is called once per frame
@@ -34,8 +35,12 @@ public class Weapon : MonoBehaviour
     }
     private void Shoot()
     {
-        PlayMuzzleFlash(); 
-        ProcessRaycast();
+        if (ammoSlot.GetCurrentAmmo() > 0)
+        {
+            PlayMuzzleFlash();
+            ProcessRaycast();
+            ammoSlot.ReduceCurrentAmmo(); 
+        }
 
     }
 
