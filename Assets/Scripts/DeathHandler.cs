@@ -17,6 +17,8 @@ public class DeathHandler : MonoBehaviour
         gameOverCanvas.enabled = true;
         // freeze time when player is dead
         Time.timeScale = 0;
+        // disable switching of weapons when dead
+        FindObjectOfType<WeaponSwitcher>().enabled = false; 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true; 
     }

@@ -9,7 +9,9 @@ public class WeaponZoom : MonoBehaviour
     [SerializeField] float zoomedinFOV = 20f;//using scoop
     [SerializeField] float zoomOutSensitivity = 2f;
     [SerializeField] float zoomInSensitivity = .5f;
-    RigidbodyFirstPersonController fpsController;//access to Rigid body for sensitivty
+
+    // We need to access this for zoom and sensitivity of the player
+    [SerializeField] RigidbodyFirstPersonController fpsController;//access to Rigid body for sensitivty
     bool zoomedInToggle = false; //regularly just zoomed out
     private void Start()
     {

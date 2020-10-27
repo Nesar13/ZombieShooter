@@ -18,29 +18,46 @@ public class Weapon : MonoBehaviour
     //instantiate a gameObject and destroy it 
     [SerializeField] GameObject hitEffect;
 
-    [SerializeField] Ammo ammoSlot; 
-   
+    [SerializeField] Ammo ammoSlot;
+    [SerializeField] AmmoType ammoType; 
+
+    // time between each shots
+    [SerializeField] float timeBetweenShots = 0.5f; 
+
+
+    bool canShoot= true;
+
+    // when this particular class is enabled
+    private void OnEnable()
+    {
+        canShoot = true; 
+    }
 
     // Update is called once per frame
     void Update()
     {
         // left click to shoot 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0) && canShoot == true)
         {
-            Shoot(); 
+            //starting a coroutine to add a delay between shots
+            StartCoroutine(Shoot());
         }
 
-        
-        
+
+
     }
-    private void Shoot()
+    IEnumerator Shoot()
     {
-        if (ammoSlot.GetCurrentAmmo() > 0)
+        canShoot = false;
+        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
             PlayMuzzleFlash();
             ProcessRaycast();
-            ammoSlot.ReduceCurrentAmmo(); 
+            ammoSlot.ReduceCurrentAmmo(ammoType);
         }
+
+        yield return new WaitForSeconds(timeBetweenShots);
+        canShoot = true;
 
     }
 
