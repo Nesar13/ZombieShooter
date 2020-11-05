@@ -16,19 +16,30 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
 
-    bool isProvoked = false; 
-
+    bool isProvoked = false;
+    EnemyHealth health; 
     // Start is called before the first frame update
     void Start()
     {
 
         //Get the component (e.g. colliders, rigidbody, script)
         navMeshAgent = GetComponent<NavMeshAgent>(); 
+        
+        health = GetComponent<EnemyHealth>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (health.IsDead()) {
+
+            //disable Enemy AI but does not disable navmeshAgent
+            enabled = false;
+
+            // disabling navmeshAgent to prevent dead zombie following player
+            navMeshAgent.enabled = false; 
+        }
         //target is the player, transform is current game object
         distanceToTarget = Vector3.Distance(target.position, transform.position); 
         if (isProvoked)

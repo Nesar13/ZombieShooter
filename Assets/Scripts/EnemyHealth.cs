@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] float hitPoints = 100f; 
+    [SerializeField] float hitPoints = 100f;
+
+    private bool isDead = false; 
+
+    public bool IsDead() { return isDead; }
 
     public void TakeDamage(float damage)
     {
@@ -16,8 +20,17 @@ public class EnemyHealth : MonoBehaviour
             // Destroy the game object if hitpoints is less than 0 
             // the object that is attached to 
 
-            Destroy(gameObject); 
-
+            /*Destroy(gameObject);*/
+            Die(); 
         }
+    }
+
+    public void Die()
+    {
+        if (isDead) return; ///if enemy is already dead then end function 
+        isDead = true; 
+        GetComponent<Animator>().SetTrigger("die"); 
+
+
     }
 }
