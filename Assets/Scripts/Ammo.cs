@@ -7,7 +7,7 @@ public class Ammo : MonoBehaviour
     [SerializeField] AmmoSlot[] ammoSlots; 
 
     [System.Serializable]
-
+    //Didar remove this comment
     // creating a class for ammos which will be used to get ammotype
     // and the ammoAmount
     private class AmmoSlot
