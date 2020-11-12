@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4580126187623018582}
   - component: {fileID: 4580126187622005890}
   - component: {fileID: 515968049505175164}
-  - component: {fileID: 155689574}
   m_Layer: 0
   m_Name: SciFiGunLightBlue
   m_TagString: Untagged
@@ -100,28 +99,8 @@ MonoBehaviour:
   range: 100
   damage: 20
   muzzleFlash: {fileID: 648938417200015870}
-  hitEffect: {fileID: 8567915466876334663, guid: 70c59c17ad707c446a4a5d9183d89208, type: 3}
+  hitEffect: {fileID: 0}
   ammoSlot: {fileID: 0}
-  ammoType: 0
-  timeBetweenShots: 0.5
---- !u!114 &155689574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4580126187619753942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 262714e866910d54dbc7d3e177015cab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpsCamera: {fileID: 0}
-  zoomedOutFOV: 60
-  zoomedinFOV: 20
-  zoomOutSensitivity: 2
-  zoomInSensitivity: 0.5
-  fpsController: {fileID: 0}
 --- !u!1001 &7644557546902505169
 PrefabInstance:
   m_ObjectHideFlags: 0
