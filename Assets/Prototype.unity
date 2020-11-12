@@ -183,58 +183,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1441769727, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: ammoSlots.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1441769727, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: ammoSlots.Array.data[0].ammoAmount
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1441769727, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: ammoSlots.Array.data[1].ammoAmount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1441769727, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: ammoSlots.Array.data[2].ammoType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1441769727, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: ammoSlots.Array.data[1].ammoType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1441769727, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: ammoSlots.Array.data[2].ammoAmount
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 666012684316876919, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 1844709208}
-    - target: {fileID: 4081261684563397068, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: ammoType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6524326640565738908, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: damage
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 6524326640565738908, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: timeBetweenShots
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6670577577522088023, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: damage
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 6670577577522088023, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: timeBetweenShots
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6670577577522088023, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
-      propertyPath: ammoType
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec4a64267c8b7b74f8fdc60079fae64a, type: 3}
 --- !u!1001 &172756089
